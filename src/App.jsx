@@ -2,11 +2,11 @@ import { useCallback, useEffect, useState } from 'react'
 import './App.scss'
 
 // Text
-const text = "torsive agrapha hausee-col choller lambitive platten annodated autotelic aeolipyle liquifacient dabchick sipidity saporine pustule psychrolusia tramontaine stamineous loquence foehn theotherapy";
+const text = "The quick fox jumps over the lazy dog";
 const words = text.split(" ");
 
 // Calculations
-const calculateWPM = (charCount) => (minutes) => charCount / 1 / minutes;
+const calculateWPM = (charCount) => (minutes) => charCount / 5 / minutes;
 const charCount = (x) => x.split(" ").join("").length;
 
 const calculateMinutes = (finishedTime) => (startedTime) => 
