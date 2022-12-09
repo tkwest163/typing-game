@@ -1,8 +1,9 @@
-import { useCallback, useEffect, useState } from 'react'
-import './App.scss'
+import { useCallback, useEffect, useState } from "react";
+import './App.scss';
 
 // Text
-const text = "The quick brown fox jumps over the lazy dog";
+// const text = "The quick brown fox jumped over the lazy dog"
+const text = "Me? No. Come on. Don't be crazy. I know the wrestlers get all the fancy ladies, and the clothes, and the free creams and lotions. But my life is good! Really good! I get to wake up every morning at 5am and make some soup! It's the best. I love it. I get to lay in a bed, all by myself, all of my life! That's fantastic! Go. Go away! Read some books.";
 const words = text.split(" ");
 
 // Calculations
@@ -34,7 +35,7 @@ const reset = useCallback(() => {
 }, []);
 
  // This makes it so that once you finish typing and get your score, you press esc 
- // to exit and restart. 27 is the keycode for ESC
+ // to exit and restart. 27 is the keycode for ESC.
 useEffect(() => {
   const handleKeyUpEvent = ({ keyCode }) => {
     const pressedESCKey = keyCode === 27;
@@ -52,6 +53,9 @@ useEffect(() => {
 
   return (
     <div className="app">
+       <div className="title">
+          <h1>Speed</h1>
+        </div>
       <div className="words">
         {words.map((word, wordIndex) => (
           <div className={`word ${
@@ -87,6 +91,7 @@ useEffect(() => {
         setIncorrectChars(setIncorrectChars + 1);
       }
 
+      // Exact characters have to match! 
       const isCorrectWord = words[currentWordIndex] === inputValue;
 
       // No recoil for correct index letter inputted

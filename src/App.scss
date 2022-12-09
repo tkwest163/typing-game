@@ -1,6 +1,7 @@
 $blue: rgb(68, 76, 224);
 $green: rgb(15, 154, 15);
 $alt-green: rgb(20, 79, 20);
+$soft-green: rgb(166, 205, 179);
 $beige: beige;
 $red: rgb(243, 6, 6);
 $font-family: 'Courier New', Courier, monospace;
@@ -22,7 +23,14 @@ body,
     display: grid;
     place-items: center;
     color: darken(beige, 80%);
-    background-color: rgb(166, 205, 179);
+    background-color: $soft-green;
+}
+
+.title {
+    display: grid;
+    place-items: center;
+    color: white;
+    margin-bottom: 100px;
 }
 
 .app {
@@ -36,9 +44,10 @@ body,
     .word {
         display: flex;
         margin-bottom: 10px;
+        padding: 2px 4px;
     
     &.current {
-        background-color: rgb(166, 205, 179), 10%;
+        background-color: $soft-green, 10%;
     
 
     &.correct {
