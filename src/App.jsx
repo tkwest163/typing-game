@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import './App.scss'
 
 // Text
-const text = "The quick fox jumps over the lazy dog";
+const text = "The quick brown fox jumps over the lazy dog";
 const words = text.split(" ");
 
 // Calculations
